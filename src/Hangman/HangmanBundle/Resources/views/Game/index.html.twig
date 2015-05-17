@@ -1,0 +1,83 @@
+{% extends 'HangmanBundle::layout.html.twig' %}
+
+{% block content_header '' %}
+
+{% block content %}
+
+    <h1>
+        Play Hangman!
+    </h1>
+
+    <div class="game-body">
+
+        <div class="game-stats">
+            {% if intGamesPlayed is defined %}
+                <p>Games played: </p> <p>{{ intGamesPlayed }}</p>
+            {% endif %}
+
+            {% if intGamesWon is defined %}
+                <p>Games won: </p><p>{{ intGamesWon }}</p>
+            {% endif %}
+        </div>
+
+        <div class="game-stats">
+            {% if intGuessesRemaining is defined %}
+                <p>Guesses remaining: </p> <p id="remaining-guesses">{{ intGuessesRemaining }}</p>
+            {% endif %}
+        </div>
+
+        <div id="image-container">
+            {% set strDefaultImagePath = constant('Hangman\\HangmanBundle\\Controller\\GameController::DEFAULT_IMAGE_URL') %}
+
+            <img class="stand-image" src="{{ asset(strDefaultImagePath) }}" alt="Hangman Stand" />
+
+        </div>
+
+
+        {% if strWord is defined %}
+            {% set arrCharacters = strWord|split('') %}
+            <div >
+                <p id="current-word">{% for strCharacter in arrCharacters %} _ {% endfor %}</p>
+            </div>
+        {% endif %}
+
+        <div class="game-over-buttons">
+
+            <p id="game-over-text"></p>
+            <br/>
+
+            <button id="reveal-answer-button" hidden>
+                Reveal Answer
+            </button>
+            <a href="{{ path('next_word') }}">
+                <button id="next-word-button" hidden>
+                    Next Word
+                </button>
+            </a>
+
+        </div>
+
+        <div class="letter-selection">
+
+            {% if arrLetters is defined %}
+                {% for strLetter in arrLetters %}
+
+                    <button class="character-button" value="{{ strLetter }}">
+                        {{ strLetter }}
+                    </button>
+
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+        <div class="new-game-container">
+            <a href="{{ path('welcome') }}">
+                <button class="new-game-button">
+                    Start New Game
+                </button>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

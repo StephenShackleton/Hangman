@@ -1,0 +1,2 @@
+_routing:
+    resource: "@HangmanBundle/Resources/config/routing.yml"

@@ -1,0 +1,159 @@
+body
+{
+    font-size:        14px;
+    font-family:      "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    background-color: #5F9EA0;
+}
+
+p
+{
+    display: inline;
+}
+
+h1
+{
+    color:      #FFFFFF;
+    text-align: center;
+}
+
+.game-body
+{
+    background-color: #EEEEEE;
+    color:            #483D8B;
+    text-align:       center;
+    margin:           0 auto 0 10%;
+    width:            80%;
+    position:         absolute;
+}
+
+.character-button
+{
+    width:            40px;
+    height:           40px;
+    border-radius:    10px;
+    font-size:        1.2em;
+    font-weight:      bold;
+    margin-top:       1%;
+    background-color: #ADD8E6;
+    color:            #FFFFFF;
+}
+
+.character-button:hover, .character-button:disabled
+{
+    background-color: #D3D3D3;
+    color:            #A9A9A9;
+}
+
+.stand-image
+{
+    float:      left;
+    width:      40%;
+    height:     85%;
+    margin:     2% 0 0 2%;
+    max-height: 210px;
+}
+
+#current-word
+{
+    display:    inline;
+    float:      left;
+    width:      55%;
+    height:     20%;
+    margin:     1%;
+    font-size:  2.4em;
+}
+
+.letter-selection
+{
+    max-height: 500px;
+    float:      left;
+    width:      50%;
+    height:     45%;
+    margin:     3%;
+}
+
+.game-stats
+{
+    margin: 1%;
+}
+
+.play-button
+{
+    width:            200px;
+    height:           50px;
+    border-radius:    10px;
+    font-size:        1.2em;
+    font-weight:      bold;
+    background-color: #ADD8E6;
+    color:            #FFFFFF;
+    margin-top:       2%;
+}
+
+.welcome-image
+{
+    width: 35%;
+}
+.welcome
+{
+    text-align: center;
+}
+
+.game-over-buttons
+{
+    display: inline;
+    float:   left;
+    width:   57%;
+}
+
+.game-over-buttons button
+{
+    width:            30%;
+    height:           6%;
+    border-radius:    10px;
+    font-size:        1em;
+    font-weight:      bold;
+    margin:           1%;
+    background-color: #ADD8E6;
+    color:            #FFFFFF;
+}
+
+.end-game
+{
+    text-align:  center;
+    line-height: 200%;
+}
+
+.end-game button
+{
+    width:            20%;
+    height:           10%;
+    border-radius:    10px;
+    font-size:        1em;
+    font-weight:      bold;
+    margin-top:       2%;
+    background-color: #ADD8E6;
+    color:            #FFFFFF;
+}
+
+.end-game p
+{
+    color: #FFFFFF;
+}
+
+.new-game-container
+{
+    width: 100%;
+    float: left;
+}
+
+.new-game-container button
+{
+    width:            30%;
+    height:           6%;
+    border-radius:    10px;
+    font-size:        1em;
+    font-weight:      bold;
+    margin:           2% 0 2% 0;
+    background-color: #ADD8E6;
+    color:            #FFFFFF;
+}

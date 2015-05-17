@@ -1,0 +1,29 @@
+{% extends 'HangmanBundle::layout.html.twig' %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1>
+        Play Hangman!
+    </h1>
+
+    <div class="end-game">
+
+        <p>No more words to play! Sorry...</p>
+
+        <div>
+            {% if intGamesPlayed is defined %}
+                <p>Games played: </p> <p>{{ intGamesPlayed }}</p>
+            {% endif %}
+
+            {% if intGamesWon is defined %}
+                <p>Games won: </p> <p>{{ intGamesWon }}</p>
+            {% endif %}
+        </div>
+
+        <a href="{{ path('welcome') }}">
+            <button>Start New Game</button>
+        </a>
+
+    </div>
+{% endblock %}

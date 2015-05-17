@@ -1,0 +1,19 @@
+welcome:
+    path:     /hangman
+    defaults: { _controller: HangmanBundle:Welcome:index }
+
+play:
+  path:     /hangman/play
+  defaults: { _controller: HangmanBundle:Game:index }
+
+next_word:
+  path: hangman/play/next_word
+  defaults: { _controller: HangmanBundle:Game:nextWord}
+
+guess_letter_ajax:
+  pattern:  /guessLetter
+  defaults: { _controller: HangmanBundle:Game:guessLetter }
+
+reveal_letter_ajax:
+  pattern: /retrieveAnswer
+  defaults: { _controller: HangmanBundle:Game:retrieveAnswer}

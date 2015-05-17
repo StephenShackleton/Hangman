@@ -1,0 +1,21 @@
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/hangman/css/styling.css') }}" />
+    <script src="{{ asset('bundles/hangman/js/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('bundles/hangman/js/GameControls.js') }}"></script>
+{% endblock %}
+
+{% block title '' %}
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% block content_header %} {% endblock %}
+
+    <div class="block">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}

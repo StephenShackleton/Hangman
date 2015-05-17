@@ -1,0 +1,21 @@
+{% extends 'HangmanBundle::layout.html.twig' %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1>
+        Play Hangman!
+    </h1>
+
+    <div class="welcome">
+
+        <div >
+            <img class="welcome-image" src="{{ asset('bundles/hangman/images/Hangman_9.png') }}" alt="Hangman Stand" />
+        </div>
+
+        <form action="{{ path('play') }}">
+            <input type="submit" class="play-button" value="Play">
+        </form>
+
+    </div>
+{% endblock %}
